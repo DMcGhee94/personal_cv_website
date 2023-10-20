@@ -1,0 +1,18 @@
+create table if not exists view_count (
+    count int not null,
+    last_update timestamptz not null
+);
+
+create table if not exists certifications (
+    name varchar(100) not null,
+    date_gained date not null,
+    badge_link varchar(256),
+    certification_link varchar(256)
+);
+
+create table if not exists inov8_contracts (
+    client varchar(100) not null,
+    start_date date not null,
+    end_date date not null,
+    description varchar(5000)
+);
